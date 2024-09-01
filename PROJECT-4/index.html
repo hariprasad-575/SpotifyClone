@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="icon" href="img/logo.png">
+</head>
+
+<body>
+    <div class="container flex bg-black">
+        <div class="left ">
+            <div class="home bg-grey m-1 p-2 rounded">
+                <div class="logo"><img class="invert" src="img/logo.svg" alt=""></div>
+                <ul>
+                    <li><img class="invert" src="img/home.svg" alt="home">Home</li>
+                    <li><img class="invert" src="img/search.svg" alt="">Search</li>
+                </ul>
+                
+            </div>
+            <div class="library bg-grey m-1 p-2 rounded">
+                <div class="heading">
+                    <img class="invert" src="img/library.svg" alt="">
+                    <h2>Your Playlist</h2>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="content-box">
+                    <div class="content-area">
+                        <h4>Create your playlist</h4>
+                        <p>it's easy,we will help you</p>
+                        <button>Create Playlist</button>
+                    </div>
+                    <div class="content-area">
+                        <h4>Lets find some podcasts to follow</h4>
+                        <p>We'll keep you updated on new updates</p>
+                        <button>Browse podcasts</button>
+                    </div>
+                    <div class="content-area">
+                        <h4>Create your playlist</h4>
+                        <p>it's easy,we will help you</p>
+                        <button>Create Playlist</button>
+                    </div>
+                    <div class="content-area">
+                        <h4>Lets find some podcasts to follow</h4>
+                        <p>We'll keep you updated on new updates</p>
+                        <button>Browse podcasts</button>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div><a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/privacy/"><span>Privacy Center</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/"><span>Privacy Policy</span></a>
+                    </div>
+                    <div><a href="https://www.spotify.com/jp/legal/cookies-policy/"><span>Cookies</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/#s3"><span>About Ads</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/accessibility/"><span>Accessibility</span></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="right bg-grey rounded">
+            <div class="header">
+                <div class="nav flex">
+                    <img class="invert" src="img/circle-chevron-left.svg" alt="">
+                    <img class="invert" src="img/circle-chevron-right.svg" alt="">
+                </div>
+                <div class="buttons">
+                    <i class="fa-solid fa-sun" onclick="change()" id="icon"></i>
+                    <!-- <i class="fa-solid fa-moon"></i> -->
+                    <button class="signup" onclick="colorchange()">Sign-up</button>
+                    <button class="loginbtn" >Login</button>
+                </div>
+            </div>
+            
+            <div class="spotify-playlist">
+                <div class="cardcontainer">
+                    <div class="card-row">
+                        <h2>Artists</h2>
+                        <div class="cards">
+                            <div class="card artist">
+                                <img src="img/anirudh.jpg" alt="">
+                                <h4>Anirudh Ravichandar</h4>
+                                <p>Artist
+                                </p>
+                            </div>
+                            <div class="card artist">
+                                <img src="img/arjit.jpg" alt="" >
+                                <h4>Arjith Singh</h4>
+                                <p>Artist
+                                </p>
+                            </div>
+                            <div class="card artist">
+                                <img src="img/goshal.jpg" alt="">
+                                <h4>Shreya Goshal</h4>
+                                <p>Artist
+                                </p>
+                            </div>
+                            <div class="card artist">
+                                <img src="img/ar.jpg" alt="">
+                                <h4>A.R. Rahman </h4>
+                                <p>Artist
+                                </p>
+                            </div>
+                            <div class="card artist">
+                                <img src="img/spb.jpg" alt="">
+                                <h4>S.P Balasubramanyam</h4>
+                                <p>Artist
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-row">
+                        <h2>Made for Hariprasad</h2>
+                        <div class="cards" id="madeforhari">
+                            <!-- <div class="card">
+                                <div class="play">
+                                     <svg width="16" height="16" fill="#000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                                            <path d="M5 20V4L19 12L5 20Z" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <img src="img/m1.jpg" alt="">
+                                <h3>Daily Mix 2</h3>
+                                <p>Vishal Chandrashekhar, Devi Sri Prasad, Prudhvi Chandra and more
+                                </p>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="card-row">
+                        <h2>Top 10 Songs</h2>
+                        <div class="cards" id="top">
+                            <!-- <div class="card">
+                                <div class="play">
+                                     <svg width="16" height="16" fill="#000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                                            <path d="M5 20V4L19 12L5 20Z" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <img src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9" alt="">
+                                <h2>ANIMAL</h2>
+                                <p>Manan Bhardwaj, Vishal Mishra, Jaani
+                                </p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="playbar">
+                <div class="songBars">
+                    <div class="songbtns">      
+                        <img src="img/shuffle.svg" alt="">
+                        <img src="img/playprev.svg" alt="">
+                        <img style="opacity: 1;" src="img/play.svg" alt="">
+                        <img src="img/playnext.svg" alt="">
+                        <img src="img/repeat.svg" alt="">
+                    </div>
+                    <div class="rangebar">
+                        <input type="range" name="rangebar" min="0" max="100" class="bar">
+                    </div>
+                </div>
+                <div class="extraOpt">
+                    <img src="img/c1.png" alt="" class="imgstyle">
+                    <img src="img/c2.png" alt="" class="imgstyle">
+                    <img src="img/c3.png" alt="" class="imgstyle" style="height: 1.5rem;">
+                    <img src="img/c4.png" alt="" class="imgstyle" style="height: 1rem;">
+                    <img src="img/c5.png" alt="" class="imgstyle">      
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
